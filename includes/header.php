@@ -11,10 +11,12 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="/SPK-PEM/style.css" rel="stylesheet">
   <style>
   body { padding-top: 56px; font-family: 'Roboto', sans-serif; background: #f6f7fb; }
     .sidebar { min-width:220px; max-width:220px; }
+    .material-icons { font-size: 20px; vertical-align: middle; margin-right:8px; }
     .navbar { background: linear-gradient(90deg,#538CDF,#6FA8E6) !important; }
     .navbar-brand { font-weight:700; color: #fff !important; }
     .navbar .ms-auto { color: #fff; }

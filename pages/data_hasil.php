@@ -10,7 +10,7 @@ include('../includes/sidebar.php');
   <!-- Print-only header: logo + app name (hidden on-screen, visible only when printing) -->
   <div class="printable text-center mb-3 d-none d-print-block">
     <div style="display:flex;align-items:center;justify-content:center;gap:12px;">
-      <img src="/SPK-SAW/assets/logo.png" alt="Logo" style="width:48px;height:48px;object-fit:contain;">
+      <img src="/SPK-PEM/assets/logo.png" alt="Logo" style="width:48px;height:48px;object-fit:contain;">
       <div style="text-align:left;">
         <div style="font-size:18pt;font-weight:700;">Sistem Penunjang Keputusan</div>
         <div style="font-size:10pt;color:#333;">Maintenance Equipment</div>
@@ -44,7 +44,7 @@ if (!empty($_GET['history_id'])) {
 
     if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
       $formId = 'delete-form-'.intval($hid);
-      echo "<form id='".$formId."' method='POST' action='/SPK-SAW/process/delete_history.php' style='display:inline'>";
+      echo "<form id='".$formId."' method='POST' action='/SPK-PEM/process/delete_history.php' style='display:inline'>";
       echo "<input type='hidden' name='history_id' value='".htmlspecialchars($hid)."'>";
       echo "<button type='button' data-form='".$formId."' class='btn btn-icon btn-sm btn-danger ms-2 btn-delete-history' title='Hapus History'>";
       echo '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 6h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 6v14c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 11v6M14 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -137,7 +137,7 @@ if (!empty($_GET['history_id'])) {
     if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
       $fid = 'delete-form-'.intval($hh['id_history']);
       echo "<div>";
-      echo "<form id='".$fid."' method='POST' action='/SPK-SAW/process/delete_history.php' style='margin:0'>";
+      echo "<form id='".$fid."' method='POST' action='/SPK-PEM/process/delete_history.php' style='margin:0'>";
       echo "<input type='hidden' name='history_id' value='".htmlspecialchars($hh['id_history'])."'>";
       echo "<button type='button' data-form='".$fid."' class='btn btn-icon btn-sm btn-danger btn-delete-history' title='Hapus'>";
       echo '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 6h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 6v14c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 11v6M14 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';

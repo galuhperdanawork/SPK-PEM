@@ -2,5 +2,5 @@
 session_start();
 session_unset();
 session_destroy();
-header('Location: /SPK-SAW/login.php');
+header('Location: /SPK-PEM/login.php');
 exit;
