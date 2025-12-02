@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Sistem Penunjang Keputusan Periodical Maintenance Equipment</title>
+  <title>Sistem Penunjang Keputusan - Periodical Equipment Maintenance</title>
   <link href="/SPK-PEM/assets/logo.png" rel="icon">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
