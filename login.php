@@ -52,7 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: var(--accent-1);
+            /* Background image with white transparent mask */
+            background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('/SPK-PEM/assets/img-bg.jpg') center/cover no-repeat;
+            background-color: var(--accent-1);
+            /* Default text color (blue) */
+            color: #0d6efd;
         }
 
         .login-card {
@@ -89,11 +93,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <!-- Kolom Teks -->
         <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
-            <h1 style="color: #ffffff;font-size:48px;font-weight:700;">
+            <h1 style="color: #000000;font-size:48px;font-weight:700;">
                 Sistem Penunjang Keputusan
             </h1>
 
-            <p class="desc-app">
+            <p class="desc-app" style="color: #000000;">
                 Aplikasi penunjang keputusan dengan metode Simple Additive Weighing.<br>
                 Kelola kriteria, alternatif, dan hasil rekomendasi equipment.
             </p>
