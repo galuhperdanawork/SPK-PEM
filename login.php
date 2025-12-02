@@ -94,12 +94,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- Kolom Teks -->
         <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
             <h1 style="color: #000000;font-size:48px;font-weight:700;">
-                Sistem Penunjang Keputusan
+                Sistem Penunjang Keputusan - Periodical Equipment Maintenance (PEM)
             </h1>
 
             <p class="desc-app" style="color: #000000;">
-                Aplikasi penunjang keputusan dengan metode Simple Additive Weighing.<br>
-                Kelola kriteria, alternatif, dan hasil rekomendasi equipment.
+                Aplikasi penunjang keputusan periodical equipment maintenance dengan metode Simple Additive Weighting.<br>
+                SPK-PEM dapat mengelola kriteria, alternatif, dan mencari hasil perhitungan rekomendasi equipment maintenance.
             </p>
         </div>
 
