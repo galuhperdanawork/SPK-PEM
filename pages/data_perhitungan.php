@@ -20,6 +20,8 @@ $f_plant = $_GET['id_plant'] ?? '';
 $f_classification = $_GET['id_classification'] ?? '';
 $f_period = $_GET['id_inspection_period'] ?? '';
 $f_last = $_GET['id_last_inspection'] ?? '';
+// apakah user sudah memilih setidaknya satu filter?
+$hasFilter = ($f_grade !== '' || $f_plant !== '' || $f_classification !== '' || $f_period !== '' || $f_last !== '');
 ?>
 
 <!-- Filter form -->
@@ -77,23 +79,25 @@ $f_last = $_GET['id_last_inspection'] ?? '';
         <input class="form-check-input" type="checkbox" id="purge_prev" name="purge_previous" value="1">
         <label class="form-check-label" for="purge_prev">Hapus hasil perhitungan sebelumnya</label>
       </div>
-      <button class="btn btn-primary">Hitung (hanya data terfilter)</button>
+      <button class="btn btn-primary" <?= $hasFilter ? '' : 'disabled title="Pilih minimal satu filter terlebih dahulu"' ?>>Hitung (hanya data terfilter)</button>
     </form>
     </div>
   </div>
 <?php endif; ?>
 
 <?php
-// ambil semua equipment beserta nilai kriterianya
-$whereClauses = [];
+  // hanya ambil data dan tampilkan tabel jika ada filter
+  // ambil semua equipment beserta nilai kriterianya
+  $whereClauses = [];
 if($f_grade) $whereClauses[] = "e.id_grade=".(int)$f_grade;
 if($f_plant) $whereClauses[] = "e.id_plant=".(int)$f_plant;
 if($f_classification) $whereClauses[] = "e.id_classification=".(int)$f_classification;
 if($f_period) $whereClauses[] = "e.id_inspection_period=".(int)$f_period;
 if($f_last) $whereClauses[] = "e.id_last_inspection=".(int)$f_last;
 $whereSql = count($whereClauses)? 'WHERE '.implode(' AND ', $whereClauses):'';
+  if ($hasFilter) {
 
-$q = $koneksi->query("SELECT 
+  $q = $koneksi->query("SELECT 
     e.id_equipment,
     e.equipment_name,
     g.grade_point,
@@ -256,6 +260,10 @@ if ($totalPages > 1) {
 
   echo "</ul></nav></div>";
 }
+  } else {
+    // jika belum ada filter, tampilkan pesan informatif dan jangan ambil data
+    echo "<div class='card'><div class='card-body'><div class='alert alert-info mb-0'>Silakan pilih minimal satu filter dan tekan \"Tampilkan\" untuk melihat data tabel.</div></div></div>";
+  }
 ?>
 </div>
 
