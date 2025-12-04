@@ -152,7 +152,7 @@ if (isset($_GET['edit'])) {
 
   <!-- Form Tambah -->
   <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-  <div class="card mb-4">
+  <div class="card mb-4 simple-card">
     <div class="card-body">
     <h5 class="card-title mb-3 text-center">Tambah/Edit Data</h5>
   <form method="POST" class="mt-3 mb-0" action="<?= isset($editRow) ? '../process/update_alternatif.php' : '' ?>">
@@ -265,7 +265,7 @@ if (isset($_GET['edit'])) {
         <button class="btn btn-outline-secondary" type="submit">Search</button>
       </div>
     </form>
-    <div class="card">
+    <div class="card simple-card">
       <div class="card-body p-0">
     <table class="table table-bordered mb-0">
       <thead class="table-dark">

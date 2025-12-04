@@ -25,7 +25,7 @@ $hasFilter = ($f_grade !== '' || $f_plant !== '' || $f_classification !== '' || 
 ?>
 
 <!-- Filter form -->
-<div class="card mb-3">
+<div class="card mb-3 simple-card">
   <div class="card-body">
     <form method="get" class="row g-2 mb-0">
   <div class="col-md-2">
@@ -67,7 +67,7 @@ $hasFilter = ($f_grade !== '' || $f_plant !== '' || $f_classification !== '' || 
 
 <!-- Hitung button  -->
 <?php if(isset($_SESSION['role']) && $_SESSION['role']==='admin'): ?>
-  <div class="card mb-3">
+  <div class="card mb-3 simple-card">
     <div class="card-body">
     <form method="post" action="../process/compute_saw.php" class="mb-0">
     <input type="hidden" name="id_grade" value="<?=htmlspecialchars($f_grade)?>">
@@ -192,7 +192,7 @@ $baseUrl = 'data_perhitungan.php';
 if (!empty($baseParams)) $baseUrl .= '?' . http_build_query($baseParams) . '&'; else $baseUrl .= '?';
 
 // Matrix Nilai Awal (hanya paged ids)
-echo "<div class='card mb-3'><div class='card-body'><h5 class='card-title'>Matrix Nilai Awal</h5>";
+echo "<div class='card mb-3 simple-card'><div class='card-body'><h5 class='card-title'>Matrix Nilai Awal</h5>";
 echo "<div class='table-responsive'><table class='table table-bordered table-sm mb-0'><thead><tr><th>Equipment</th>";
 foreach($criteria as $k=>$m) echo "<th>{$m['criteria_name']}</th>";
 echo "</tr></thead><tbody>";
@@ -206,7 +206,7 @@ foreach($paged_ids as $id){
 echo "</tbody></table></div></div></div>";
 
 // Normalisasi (hanya paged ids)
-echo "<div class='card mb-3'><div class='card-body'><h5 class='card-title'>Normalisasi</h5>";
+echo "<div class='card mb-3 simple-card'><div class='card-body'><h5 class='card-title'>Normalisasi</h5>";
 echo "<div class='table-responsive'><table class='table table-bordered table-sm mb-0'><thead><tr><th>Equipment</th>";
 foreach($criteria as $k=>$m) echo "<th>{$m['criteria_name']}</th>";
 echo "</tr></thead><tbody>";
@@ -220,7 +220,7 @@ foreach($paged_ids as $id){
 echo "</tbody></table></div></div></div>";
 
 // Bobot & Total (hanya paged ids)
-echo "<div class='card mb-3'><div class='card-body'><h5 class='card-title'>Bobot & Total</h5>";
+echo "<div class='card mb-3 simple-card'><div class='card-body'><h5 class='card-title'>Bobot & Total</h5>";
 echo "<div class='table-responsive'><table class='table table-bordered table-sm mb-0'><thead><tr><th>Equipment</th>";
 foreach($criteria as $k=>$m) echo "<th>{$m['criteria_name']} (w={$m['weight']})</th>";
 echo "<th>Total</th></tr></thead><tbody>";
@@ -260,9 +260,9 @@ if ($totalPages > 1) {
 
   echo "</ul></nav></div>";
 }
-  } else {
+    } else {
     // jika belum ada filter, tampilkan pesan informatif dan jangan ambil data
-    echo "<div class='card'><div class='card-body'><div class='alert alert-info mb-0'>Silakan pilih minimal satu filter dan tekan \"Tampilkan\" untuk melihat data tabel.</div></div></div>";
+    echo "<div class='card simple-card'><div class='card-body'><div class='alert alert-info mb-0'>Silakan pilih minimal satu filter dan tekan \"Tampilkan\" untuk melihat data tabel.</div></div></div>";
   }
 ?>
 </div>

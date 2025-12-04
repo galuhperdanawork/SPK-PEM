@@ -399,6 +399,36 @@ a.card-link:hover .card {
     font-weight: 600
 }
 
+/* Page-local styles migrated here from individual pages for centralized styling */
+
+/* Profile page */
+.profile-card { border-radius: 12px; box-shadow: 0 8px 24px rgba(16,24,40,0.06); overflow: hidden; }
+.profile-left { background: linear-gradient(180deg,#f7fbff,#ffffff); padding: 28px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.avatar { width:96px; height:96px; border-radius:50%; background:#0d6efd; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:32px; }
+.profile-right { padding: 22px; }
+.role-badge { background: rgba(13,110,253,0.12); color:#0d6efd; padding:6px 10px; border-radius:999px; font-weight:600; }
+.muted-small { color:#6c757d; font-size:0.95rem; }
+.action-btns .btn { min-width:120px; }
+.users-search { max-width:320px; }
+
+/* Data Kriteria page */
+.simple-card { border-radius:12px; box-shadow:0 8px 24px rgba(16,24,40,0.04); }
+.page-header { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:16px; }
+.page-title { font-weight:700; font-size:1.15rem; }
+.criteria-badge { padding:4px 8px; border-radius:8px; background:rgba(0,0,0,0.04); }
+.table-small td, .table-small th { padding:0.5rem 0.75rem; }
+.actions-cell .material-icons { vertical-align:middle; font-size:18px; }
+.muted { color:#6c757d; }
+@media (max-width:767px){ .page-header{flex-direction:column;align-items:flex-start;} }
+
+/* Dashboard specific helpers (migrated) */
+.dash-grid{margin-top:18px}
+.dash-card{position:relative;padding:18px 18px 18px 26px;border-radius:12px;background:#fff;box-shadow:0 10px 24px rgba(17,24,39,0.06);min-height:84px;display:flex;align-items:center;gap:12px}
+.dash-card .title{font-weight:700;color:#222}
+.dash-card .sub{font-size:12px;color:#666}
+.card-icon{margin-left:auto;background:#f5f7fb;border-radius:8px;padding:8px}
+@media(max-width:767px){ .welcome-pill{margin:10px 12px} .dash-card{min-height:72px} }
+
 
 /* top navbar smaller on desktop */
 

@@ -12,7 +12,7 @@ $edit_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 <div class="row mt-4">
   <div class="col-md-6">
     <!-- Grade -->
-    <div class="card mb-3">
+    <div class="card mb-3 simple-card">
       <div class="card-body">
         <h5 class="card-title">Grade</h5>
         <?php
@@ -56,7 +56,7 @@ $edit_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
     </div>
 
     <!-- Inspection Period -->
-    <div class="card">
+    <div class="card simple-card">
       <div class="card-body">
         <h5 class="card-title">Inspection Period</h5>
         <?php
@@ -102,7 +102,7 @@ $edit_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
   <div class="col-md-6">
     <!-- Classification -->
-    <div class="card">
+    <div class="card simple-card">
       <div class="card-body">
         <h5 class="card-title">Classification</h5>
         <?php
