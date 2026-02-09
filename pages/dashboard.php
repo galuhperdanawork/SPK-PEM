@@ -37,7 +37,7 @@
           <div class="dash-accent accent-green"></div>
           <div>
             <div class="title">Data Alternatif</div>
-            <div class="sub">Daftar equipment</div>
+            <div class="sub">Menampilkan daftar equipment pada inventory</div>
           </div>
           <!--<div class="card-icon">➡</div>-->
         </div>
@@ -50,7 +50,7 @@
           <div class="dash-accent accent-orange"></div>
           <div>
             <div class="title">Data Perhitungan</div>
-            <div class="sub">Hitung SAW & filter</div>
+            <div class="sub">Lakukan perhitungan dengan metode SAW</div>
           </div>
           <!--<div class="card-icon">✓</div>-->
         </div>
@@ -63,7 +63,7 @@
           <div class="dash-accent accent-red"></div>
           <div>
             <div class="title">Data Hasil Akhir</div>
-            <div class="sub">Riwayat & hasil perhitungan</div>
+            <div class="sub">Lihat kembali riwayat & hasil perhitungan</div>
           </div>
           <!--<div class="card-icon">★</div>-->
         </div>

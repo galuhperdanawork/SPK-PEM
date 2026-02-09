@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- Text Left -->
         <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
             <h1 class="fw-bold" style="font-size:40px;">
-                Sistem Penunjang Keputusan<br>Maintenance Equipment
+                Sistem Pendukung Keputusan<br>Maintenance Equipment
             </h1>
             <p class="mt-3" style="max-width:450px;">
                 Menggunakan metode SAW untuk menentukan prioritas maintenance secara objektif, cepat dan akurat.

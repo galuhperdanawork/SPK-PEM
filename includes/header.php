@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Sistem Penunjang Keputusan - Periodical Equipment Maintenance</title>
+  <title>Sistem Pendukung Keputusan - Periodical Equipment Maintenance</title>
   <link href="/SPK-PEM/assets/logo.png" rel="icon">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -62,7 +62,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
   <div class="container-fluid">
     <a class="navbar-brand ms-3 d-flex align-items-center" href="/SPK-PEM/pages/dashboard.php">
       <img src="/SPK-PEM/assets/logo.png" alt="Logo" style="width:32px;height:32px;object-fit:contain;margin-right:8px;">
-      <span>Sistem Penunjang Keputusan - Periodical Equipment Maintenance</span>
+      <span>Sistem Pendukung Keputusan - Periodical Equipment Maintenance</span>
     </a>
     <button class="sidebar-toggle d-md-none" aria-label="Toggle menu" title="Menu">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

@@ -83,11 +83,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- Kolom Teks -->
         <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
             <h1 style="color: #ffffff;font-size:48px;font-weight:700;">
-                Sistem Penunjang Keputusan
+                Sistem Pendukung Keputusan
             </h1>
 
             <p class="desc-app">
-                Aplikasi penunjang keputusan dengan metode Simple Additive Weighing.<br>
+                Aplikasi pendukung keputusan dengan metode Simple Additive Weighing.<br>
                 Kelola kriteria, alternatif, dan hasil rekomendasi equipment.
             </p>
         </div>
