@@ -295,10 +295,10 @@ if (isset($_GET['edit'])) {
         <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
           <td class="actions-cell">
               <a href="data_alternatif.php?edit=<?= $row['id_equipment'] ?>" class="btn btn-icon btn-sm btn-warning" title="Edit">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" stroke="currentColor" stroke-width="0" fill="currentColor"/></svg>
+                <span class="material-symbols-outlined edit-icon">edit</span>
               </a>
               <a href="../process/delete_alternatif.php?id=<?= $row['id_equipment'] ?>" class="btn btn-icon btn-sm btn-danger" title="Hapus" onclick="return confirm('Yakin ingin menghapus equipment ini?')">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 6h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 6v14c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 11v6M14 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="material-symbols-outlined">delete</span>
               </a>
           </td>
         <?php endif; ?>

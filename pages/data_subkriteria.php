@@ -44,7 +44,7 @@ $edit_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
               <td><?= (int)$g['grade_point'] ?></td>
               <td>
                 <a href="data_subkriteria.php?edit=grade&id=<?= $g['id_grade'] ?>" class="btn btn-icon btn-sm btn-warning" title="Edit">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" stroke="currentColor" stroke-width="0" fill="currentColor"/></svg>
+                  <span class="material-symbols-outlined edit-icon">edit</span>
                 </a>
                 
               </td>
@@ -88,7 +88,7 @@ $edit_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
               <td><?= (int)$p['period_point'] ?></td>
               <td>
                 <a href="data_subkriteria.php?edit=inspection_period&id=<?= $p['id_inspection_period'] ?>" class="btn btn-icon btn-sm btn-warning" title="Edit">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" stroke="currentColor" stroke-width="0" fill="currentColor"/></svg>
+                  <span class="material-symbols-outlined edit-icon">edit</span>
                 </a>
                 
               </td>
@@ -134,7 +134,7 @@ $edit_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
               <td><?= (int)$c['classification_point'] ?></td>
               <td>
                 <a href="data_subkriteria.php?edit=classification&id=<?= $c['id_classification'] ?>" class="btn btn-icon btn-sm btn-warning" title="Edit">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" stroke="currentColor" stroke-width="0" fill="currentColor"/></svg>
+                  <span class="material-symbols-outlined edit-icon">edit</span>
                 </a>
                 
               </td>

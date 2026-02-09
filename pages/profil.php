@@ -198,14 +198,14 @@ if ($role === 'admin') {
               </div>
               <div class="action-btns">
                 <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalNama">
-                  <span class="material-icons" style="vertical-align:middle;font-size:18px">edit</span> Ubah Nama
+                  <span class="material-symbols-outlined edit-icon" style="vertical-align:middle;font-size:18px">edit</span> Ubah Nama
                 </button>
                 <button class="btn btn-outline-warning ms-2" data-bs-toggle="modal" data-bs-target="#modalPassword">
-                  <span class="material-icons" style="vertical-align:middle;font-size:18px">vpn_key</span> Ganti Password
+                  <span class="material-symbols-outlined" style="vertical-align:middle;font-size:18px">vpn_key</span> Ganti Password
                 </button>
                 <?php if ($role === 'admin'): ?>
                   <button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#modalAddAccount">
-                    <span class="material-icons" style="vertical-align:middle;font-size:18px">person_add</span>
+                    <span class="material-symbols-outlined" style="vertical-align:middle;font-size:18px">person_add</span>
                   </button>
                 <?php endif; ?>
               </div>
@@ -257,15 +257,15 @@ if ($role === 'admin') {
                                   data-username="<?= htmlspecialchars($u['username']) ?>"
                                   data-name="<?= htmlspecialchars($u['nama_pengguna']) ?>"
                                   data-role="<?= htmlspecialchars($u['role']) ?>"
-                                  ><span class="material-icons" style="font-size:18px;vertical-align:middle">edit</span></button>
+                                  ><span class="material-symbols-outlined edit-icon" style="font-size:18px;vertical-align:middle">edit</span></button>
 
                           <?php if ($u['id_user'] !== $id_user): ?>
                             <form method="POST" class="d-inline" onsubmit="return confirm('Hapus akun ini?');">
                               <input type="hidden" name="del_id" value="<?= htmlspecialchars($u['id_user']) ?>">
-                              <button type="submit" name="delete_user" class="btn btn-sm btn-outline-danger"><span class="material-icons" style="font-size:18px;vertical-align:middle">delete</span></button>
+                              <button type="submit" name="delete_user" class="btn btn-sm btn-outline-danger"><span class="material-symbols-outlined" style="font-size:18px;vertical-align:middle">delete</span></button>
                             </form>
                           <?php else: ?>
-                            <button class="btn btn-sm btn-outline-secondary" disabled><span class="material-icons" style="font-size:18px;vertical-align:middle">block</span></button>
+                            <button class="btn btn-sm btn-outline-secondary" disabled><span class="material-symbols-outlined" style="font-size:18px;vertical-align:middle">block</span></button>
                           <?php endif; ?>
                         </td>
                       </tr>

@@ -47,7 +47,7 @@ if (!empty($_GET['history_id'])) {
       echo "<form id='".$formId."' method='POST' action='/SPK-PEM/process/delete_history.php' style='display:inline'>";
       echo "<input type='hidden' name='history_id' value='".htmlspecialchars($hid)."'>";
       echo "<button type='button' data-form='".$formId."' class='btn btn-icon btn-sm btn-danger ms-2 btn-delete-history' title='Hapus History'>";
-      echo '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 6h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 6v14c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 11v6M14 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      echo '<span class="material-symbols-outlined">delete</span>';
       echo "</button>";
       echo "</form>";
     }
@@ -140,7 +140,7 @@ if (!empty($_GET['history_id'])) {
       echo "<form id='".$fid."' method='POST' action='/SPK-PEM/process/delete_history.php' style='margin:0'>";
       echo "<input type='hidden' name='history_id' value='".htmlspecialchars($hh['id_history'])."'>";
       echo "<button type='button' data-form='".$fid."' class='btn btn-icon btn-sm btn-danger btn-delete-history' title='Hapus'>";
-      echo '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 6h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 6v14c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 11v6M14 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      echo '<span class="material-symbols-outlined">delete</span>';
       echo "</button>";
       echo "</form>";
       echo "</div>";

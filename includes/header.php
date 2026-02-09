@@ -11,12 +11,12 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   <link href="/SPK-PEM/style.css" rel="stylesheet">
   <style>
   body { padding-top: 56px; font-family: 'Roboto', sans-serif; background: #f6f7fb; }
     .sidebar { min-width:220px; max-width:220px; }
-    .material-icons { font-size: 20px; vertical-align: middle; margin-right:8px; }
+    .material-symbols-outlined { font-size: 20px; vertical-align: middle; margin-right:8px; }
     .navbar { background: linear-gradient(90deg,#538CDF,#6FA8E6) !important; }
     .navbar-brand { font-weight:700; color: #fff !important; }
     .navbar .ms-auto { color: #fff; }
@@ -28,7 +28,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
     .avatar { width:72px; height:72px; border-radius:50%; background:#0d6efd; color:#fff; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:20px; }
     .role-badge { background: rgba(13,110,253,0.12); color:#0d6efd; padding:6px 10px; border-radius:999px; font-weight:600; }
     .table-small td, .table-small th { padding:0.5rem 0.75rem; }
-    .actions-cell .material-icons { vertical-align:middle; font-size:18px; }
+    .actions-cell .material-symbols-outlined { vertical-align:middle; font-size:18px; }
     .welcome-pill { display:inline-block; padding:6px 12px; background:#fff; border-radius:999px; box-shadow:0 2px 8px rgba(0,0,0,0.04); margin-bottom:12px; }
     @media (max-width:767px){ .page-header{flex-direction:column;align-items:flex-start;} }
   </style>

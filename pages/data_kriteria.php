@@ -70,7 +70,7 @@ include('../includes/sidebar.php');
           $typeBadge = $r['type'] === 'benefit' ? '<span class="badge bg-success">Benefit</span>' : '<span class="badge bg-danger">Cost</span>';
           echo "<tr><td>{$no}</td><td><strong>".htmlspecialchars($r['criteria_name'])."</strong></td><td>".htmlspecialchars($r['weight'])."</td><td>{$typeBadge}</td>";
             echo "<td class='actions-cell text-end'>";
-              echo "<a href='data_kriteria.php?edit={$r['id_criteria']}' class='btn btn-sm btn-outline-warning me-1' title='Edit'><span class=\"material-icons\">edit</span></a>";
+              echo "<a href='data_kriteria.php?edit={$r['id_criteria']}' class='btn btn-sm btn-outline-warning me-1' title='Edit'><span class=\"material-symbols-outlined edit-icon\">edit</span></a>";
             echo "</td>";
           $no++;
         }

@@ -417,7 +417,9 @@ a.card-link:hover .card {
 .page-title { font-weight:700; font-size:1.15rem; }
 .criteria-badge { padding:4px 8px; border-radius:8px; background:rgba(0,0,0,0.04); }
 .table-small td, .table-small th { padding:0.5rem 0.75rem; }
-.actions-cell .material-icons { vertical-align:middle; font-size:18px; }
+.actions-cell .material-symbols-outlined { vertical-align:middle; font-size:18px; }
+/* edit icon color uniform yellow */
+.material-symbols-outlined.edit-icon { color: #ffc107 !important; }
 .muted { color:#6c757d; }
 @media (max-width:767px){ .page-header{flex-direction:column;align-items:flex-start;} }
 
