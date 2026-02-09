@@ -2,6 +2,7 @@
 session_start();
 include('../config/db.php');
 include('../includes/header.php');
+include('../includes/sidebar.php');
 
 // Pastikan user login
 if (!isset($_SESSION['id_user'])) {
@@ -159,17 +160,21 @@ if ($role === 'admin') {
 
 ?>
 
-<div class="container-fluid">
-  <div class="row">
+<div class="container mt-4">
+  <span class="welcome-pill no-print">Kelola informasi Akun</span>
 
-    <!-- SIDEBAR -->
-    <?php include('../includes/sidebar.php'); ?>
+  <div class="printable text-center mb-3 d-none d-print-block">
+    <div style="display:flex;align-items:center;justify-content:center;gap:12px;">
+      <img src="/SPK-PEM/assets/logo.png" alt="Logo" style="width:48px;height:48px;object-fit:contain;">
+      <div style="text-align:left;">
+        <div style="font-size:18pt;font-weight:700;">Sistem Penunjang Keputusan</div>
+        <div style="font-size:10pt;color:#333;">Maintenance Equipment</div>
+      </div>
+    </div>
+    <hr style="margin-top:12px;border-top:2px solid #333;">
+  </div>
 
-    <!-- KONTEN PROFIL -->
-    <div class="col-10 p-4 page-content">
-
-    
-      <span class="welcome-pill">Kelola informasi Akun</span>
+  <div class="page-content p-0">
 
       <div class="card profile-card mb-3">
         <div class="d-flex flex-column flex-md-row">
