@@ -23,8 +23,8 @@
         <div class="dash-card h-100">
           <div class="dash-accent accent-purple"></div>
           <div>
-            <div class="title">Data Sub- Kriteria</div>
-            <div class="sub">Atur nilai sub-kriteria</div>
+            <div class="title">Data Sub-Kriteria</div>
+            <div class="sub">Atur nilai preferensi dari kriteria</div>
           </div>
           <!--<div class="card-icon">■</div>-->
         </div>
