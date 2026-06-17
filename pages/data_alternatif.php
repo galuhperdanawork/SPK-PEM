@@ -293,11 +293,11 @@ if (isset($_GET['edit'])) {
           <td><?= htmlspecialchars($row['last_year'] ?? '') ?></td>
           <td><?= $row['period_name'] ?></td>
         <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-          <td class="actions-cell">
-              <a href="data_alternatif.php?edit=<?= $row['id_equipment'] ?>" class="btn btn-icon btn-sm btn-warning" title="Edit">
+          <td class="actions-cell text-end">
+              <a href="data_alternatif.php?edit=<?= $row['id_equipment'] ?>" class="btn btn-sm btn-outline-warning me-1" title="Edit">
                 <span class="material-symbols-outlined edit-icon">edit</span>
               </a>
-              <a href="../process/delete_alternatif.php?id=<?= $row['id_equipment'] ?>" class="btn btn-icon btn-sm btn-danger" title="Hapus" onclick="return confirm('Yakin ingin menghapus equipment ini?')">
+              <a href="../process/delete_alternatif.php?id=<?= $row['id_equipment'] ?>" class="btn btn-sm btn-outline-danger" title="Hapus" onclick="return confirm('Yakin ingin menghapus equipment ini?')">
                 <span class="material-symbols-outlined">delete</span>
               </a>
           </td>

@@ -8,7 +8,7 @@ include('../includes/sidebar.php');
 $edit = $_GET['edit'] ?? '';
 $edit_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 ?>
-<span class="welcome-pill">Melihat dan mengelola data Subkriteria (konversi dari skala likert)</span>
+<span class="welcome-pill">Melihat dan mengelola point Subkriteria (konversi dari skala likert)</span>
 <div class="row mt-4">
   <div class="col-md-6">
     <!-- Grade -->
@@ -43,7 +43,7 @@ $edit_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
               <td><?= htmlspecialchars($g['grade_name']) ?></td>
               <td><?= (int)$g['grade_point'] ?></td>
               <td>
-                <a href="data_subkriteria.php?edit=grade&id=<?= $g['id_grade'] ?>" class="btn btn-icon btn-sm btn-warning" title="Edit">
+                <a href="data_subkriteria.php?edit=grade&id=<?= $g['id_grade'] ?>" class="btn btn-sm btn-outline-warning me-1" title="Edit">
                   <span class="material-symbols-outlined edit-icon">edit</span>
                 </a>
                 
@@ -87,7 +87,7 @@ $edit_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
               <td><?= htmlspecialchars($p['period_name']) ?></td>
               <td><?= (int)$p['period_point'] ?></td>
               <td>
-                <a href="data_subkriteria.php?edit=inspection_period&id=<?= $p['id_inspection_period'] ?>" class="btn btn-icon btn-sm btn-warning" title="Edit">
+                <a href="data_subkriteria.php?edit=inspection_period&id=<?= $p['id_inspection_period'] ?>" class="btn btn-sm btn-outline-warning me-1" title="Edit">
                   <span class="material-symbols-outlined edit-icon">edit</span>
                 </a>
                 
@@ -133,7 +133,7 @@ $edit_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
               <td><?= htmlspecialchars($c['classification_name']) ?></td>
               <td><?= (int)$c['classification_point'] ?></td>
               <td>
-                <a href="data_subkriteria.php?edit=classification&id=<?= $c['id_classification'] ?>" class="btn btn-icon btn-sm btn-warning" title="Edit">
+                <a href="data_subkriteria.php?edit=classification&id=<?= $c['id_classification'] ?>" class="btn btn-sm btn-outline-warning me-1" title="Edit">
                   <span class="material-symbols-outlined edit-icon">edit</span>
                 </a>
                 

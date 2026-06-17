@@ -44,12 +44,12 @@ if (!empty($_GET['history_id'])) {
 
     if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
       $formId = 'delete-form-'.intval($hid);
-      echo "<form id='".$formId."' method='POST' action='/SPK-PEM/process/delete_history.php' style='display:inline'>";
-      echo "<input type='hidden' name='history_id' value='".htmlspecialchars($hid)."'>";
-      echo "<button type='button' data-form='".$formId."' class='btn btn-icon btn-sm btn-danger ms-2 btn-delete-history' title='Hapus History'>";
-      echo '<span class="material-symbols-outlined">delete</span>';
-      echo "</button>";
-      echo "</form>";
+       echo "<form id='".$formId."' method='POST' action='/SPK-PEM/process/delete_history.php' style='display:inline'>";
+       echo "<input type='hidden' name='history_id' value='".htmlspecialchars($hid)."'>";
+       echo "<button type='button' data-form='".$formId."' class='btn btn-sm btn-outline-danger ms-2 btn-delete-history' title='Hapus History'>";
+       echo '<span class="material-symbols-outlined">delete</span>';
+       echo "</button>";
+       echo "</form>";
     }
 
     echo "</div>";
@@ -136,14 +136,14 @@ if (!empty($_GET['history_id'])) {
 
     if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
       $fid = 'delete-form-'.intval($hh['id_history']);
-      echo "<div>";
-      echo "<form id='".$fid."' method='POST' action='/SPK-PEM/process/delete_history.php' style='margin:0'>";
-      echo "<input type='hidden' name='history_id' value='".htmlspecialchars($hh['id_history'])."'>";
-      echo "<button type='button' data-form='".$fid."' class='btn btn-icon btn-sm btn-danger btn-delete-history' title='Hapus'>";
-      echo '<span class="material-symbols-outlined">delete</span>';
-      echo "</button>";
-      echo "</form>";
-      echo "</div>";
+       echo "<div>";
+       echo "<form id='".$fid."' method='POST' action='/SPK-PEM/process/delete_history.php' style='margin:0'>";
+       echo "<input type='hidden' name='history_id' value='".htmlspecialchars($hh['id_history'])."'>";
+       echo "<button type='button' data-form='".$fid."' class='btn btn-sm btn-outline-danger btn-delete-history' title='Hapus'>";
+       echo "<span class=\"material-symbols-outlined\">delete</span>";
+       echo "</button>";
+       echo "</form>";
+       echo "</div>";
     }
 
     echo "</li>";
