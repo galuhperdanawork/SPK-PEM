@@ -116,12 +116,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         Login
                     </button>
                 </form>
-
+<!--
                 <hr>
 
                 <a href="register.php" class="btn btn-outline-secondary w-100">
                     Register
-                </a>
+                </a>-->
             </div>
         </div>
 

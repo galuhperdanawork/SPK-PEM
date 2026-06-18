@@ -30,6 +30,14 @@ if (session_status() === PHP_SESSION_NONE) session_start();
     .table-small td, .table-small th { padding:0.5rem 0.75rem; }
     .actions-cell .material-symbols-outlined { vertical-align:middle; font-size:18px; }
     .welcome-pill { display:inline-block; padding:6px 12px; background:#fff; border-radius:999px; box-shadow:0 2px 8px rgba(0,0,0,0.04); margin-bottom:12px; }
+    /* Material flat button style for logout/controls */
+    .btn-flat { background: transparent; border: none; color: inherit; padding: .25rem .5rem; display: inline-flex; align-items: center; gap: .4rem; font-weight: 500; }
+    .btn-flat .material-symbols-outlined { font-size:20px; vertical-align:middle; margin-right:4px; }
+    /* User control styles */
+    .user-controls { display:flex; align-items:center; gap:8px; }
+    .avatar-sm { width:36px; height:36px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:14px; }
+    .user-name { font-weight:700; }
+    .user-role { font-size:12px; opacity:0.85; }
     @media (max-width:767px){ .page-header{flex-direction:column;align-items:flex-start;} }
   </style>
 </head>
@@ -49,7 +57,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-        <a href="/SPK-PEM/process/logout.php" class="btn btn-danger">Logout</a>
+        <button type="button" class="btn btn-danger" onclick="location.href='/SPK-PEM/process/logout.php'">Logout</button>
       </div>
 
     </div>
@@ -72,11 +80,25 @@ if (session_status() === PHP_SESSION_NONE) session_start();
     <div class="ms-auto text-white">
       <?php if(isset($_SESSION['username'])):
           $displayName = $_SESSION['nama_pengguna'] ?? $_SESSION['username'] ?? '';
+          $roleName = $_SESSION['role'] ?? '';
+          $initials = '';
+          if ($displayName) {
+            $parts = preg_split('/\s+/', trim($displayName));
+            foreach ($parts as $p) { if ($p) $initials .= mb_strtoupper(mb_substr($p,0,1)); }
+            $initials = mb_substr($initials, 0, 2);
+          }
       ?>
-        <span class="me-3"><strong><?=htmlspecialchars($displayName)?></strong></span>
-        <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#logoutModal">
-          Logout
-        </button>
+        <div class="user-controls">
+          <div class="avatar-sm" style="background:#0d6efd;color:#fff;"><?= htmlspecialchars($initials ?: 'U') ?></div>
+          <div class="d-none d-sm-block">
+            <div class="user-name text-white"><?= htmlspecialchars($displayName) ?></div>
+            <div class="user-role text-white muted-small"><?= htmlspecialchars(ucfirst($roleName)) ?></div>
+          </div>
+          <button class="btn-flat btn-sm text-white ms-2" data-bs-toggle="modal" data-bs-target="#logoutModal" title="Logout">
+            <span class="material-symbols-outlined">logout</span>
+            Logout
+          </button>
+        </div>
 
       <?php else: ?>
         <a href="/SPK-PEM/login.php" class="btn btn-sm btn-light">Login</a>
